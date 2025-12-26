@@ -1,0 +1,136 @@
+
+  .bg-image-large
+  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+    background-position:bottom; 
+    
+  }
+  .bg-image-large-support
+  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:500px;
+    background-position:top;
+    background-attachment: fixed; 
+    
+  }
+  .carousel-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+
+
+  .review-back-image
+  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;  
+  }
+
+  .bg-image-small
+  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:auto;
+    background-position:right; 
+  }
+  .bg-image-small-support
+  {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:350px;
+    background-position:bottom; 
+    background-attachment: fixed; 
+
+  }
+  li 
+  {
+  text-decoration: none;
+  color:#fff;
+  }
+  #nav-toggle-button
+  {
+    color: rgba(238, 238, 238, 0.0)
+  }
+  .custom-datepicker {
+   height: 40px;
+   background-Color:"#F6F6F6";
+   border-color: black;
+  }
+  .custom-datepicker-mobile {
+  background-color:#F6F6F6 ;
+  height: 40px;
+  width: 85px;
+  }
+  .custom-file-upload {
+    border: 1px solid #ffff;
+    display: inline-block;
+    padding: 6px 10px;
+    cursor: pointer;
+    background-color:#fff;
+    width: 80%;
+  }
+  
+  .custom-file-upload span {
+    margin-right: 5px;
+    color:black;
+  }
+  .number
+  {
+    font-weight: 900;
+    font-family: sans-serif;
+  }
+  .text-large
+  {
+    color:black;
+    font-weight: 700;
+    line-height: 20px;
+    font-size:xx-large;
+  }
+  .text-small
+  {
+    color: black;
+    font-weight: 700;
+    line-height: 10px;
+    font-size:medium;  
+  }
+.bg-image-count
+{
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.container-button {
+  position: relative;
+ 
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px;
+  
+}
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #389B87; 
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+@media (max-width: 768px) {
+  .x-axis {
+    overflow-x: hidden; 
+  }
+}
