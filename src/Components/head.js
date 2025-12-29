@@ -10,8 +10,8 @@ import { useState } from "react";
 function Head()
 {
     const[isbuttonClicked,setbuttonClicked]=useState(false)
-    const backgroundImageUrl = './image.jpeg';
-    const backgroundImageUrl01 = './image.jpeg';
+    const backgroundImageUrl = './image.png';
+    const backgroundImageUrl01 = './image.png';
     const buttonclick=()=>
     {
     setbuttonClicked(!isbuttonClicked);
@@ -38,7 +38,7 @@ function Head()
             </div>
             <div className="mx-2">
               <Bounce top duration={3000}>
-              <p style={{color:"white",fontSize:"20px",fontFamily:"domine"}}>Embrace the symphony of waves and whispers of the wild as you beach camp under the stars.</p>
+              <p style={{color:"white",fontSize:"20px",fontFamily:"domine"}}>Embrace the symphony of waves and whispers of the wild as you Beach Camp under the stars.</p>
               </Bounce>
             </div>
             <div className="mx-2">
@@ -60,7 +60,7 @@ function Head()
             </div>
             <div className="col-12" style={{transform: "translateY(-170%)"}}>
             <Bounce top duration={3000}>
-            <p style={{color:"white",fontSize:"15px",fontFamily:"domine"}}>Embrace the symphony of waves and whispers of the wild as you beach camp under the stars.</p>
+            <p style={{color:"white",fontSize:"15px",fontFamily:"domine"}}>Embrace the symphony of waves and whispers of the wild as you Beach Camp under the stars.</p>
             </Bounce>
             </div>
             <div>

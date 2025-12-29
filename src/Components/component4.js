@@ -15,8 +15,7 @@ function Component4()
             </div>
             <Bounce right duration={4000}>
              <div className="col-12 col-md-6">
-            <h6 style={{color:"#fcb900",fontWeight:"700"}}>WHY CHOOSE US</h6>
-            <p className="d-none d-md-block" style={{color:"black",textAlign:"left",fontSize:"40px",fontWeight:"700",lineHeight:"50px"}}>Get your story ready for campfire storytime.</p>
+             <p className="d-none d-md-block" style={{color:"black",textAlign:"left",fontSize:"40px",fontWeight:"700",lineHeight:"50px"}}>Get your story ready for campfire storytime.</p>
             <p className="d-block d-md-none" style={{color:"black",textAlign:"left",fontSize:"25px",fontWeight:"700",lineHeight:"30px"}}>Get your story ready for campfire storytime.</p>
              <div className="row col-12">
               <div className="col-3">

@@ -22,7 +22,7 @@ function Clientsay()
     return(
 <>
 <ScrollTrigger onEnter={()=>setCounterOn(true)} onExit={()=>setCounterOn(false)}>
-<div className="container mt-5">
+<div className="container mt-5 mb-5">
 <div className="row">
     <div className="col-12 col-md-7">
     <p className="d-none d-md-block" style={{color:"black",textAlign:"left",fontSize:"40px",fontWeight:"600",lineHeight:"50px"}}>What Our Campers Say About Us</p>

@@ -1,152 +1,148 @@
-import React from "react";
-import DatePicker from "react-datepicker";
-import {AiOutlineForm} from "react-icons/ai";
-import { Button} from "react-bootstrap";
-import { useState,useEffect } from "react";
-import {format} from "date-fns";
-import emailjs from '@emailjs/browser';
-import 'react-toastify/dist/ReactToastify.css';
-function Book()
-{
-  const[isSubmit,setSubmit]=useState(false)
-  const [date, setSelectedDate] = useState(null);
-  const[name,setName]=useState(" ");
-  const[phone,setPhone]=useState(" ");
-  const[person,setPerson]=useState(" ");
-  const[camping,setCamping]=useState(" ");
-  const[message,setMessage]=useState("")
-  const[errormessage,seterrorMessage]=useState("")
-    const handleDateChange = (date) => {
-        setSelectedDate(date);
-      };
-      const formattedDate = format(new Date(date), 'MM/dd/yyyy');
-      const submitForm=()=>
-      {
-      setSubmit(!isSubmit)
-      }
-      const [fontSize, setfont] = useState('30px');
-    
-      useEffect(() => {
-        const intervalId = setInterval(() => {
-          setfont((prevfont) => (prevfont === '30px' ? '28px' : '30px'));
-        }, 800);
-    
-        // Cleanup the interval on component unmount
-        return () => clearInterval(intervalId);
-      }, []);
+import React, { useState } from "react";
+import { AiOutlineForm } from "react-icons/ai";
+import { Button } from "react-bootstrap";
+import { format } from "date-fns";
+import emailjs from "@emailjs/browser";
+import "react-datepicker/dist/react-datepicker.css";
 
-      //booking function
-      const submitBoking=()=>
-      {
-        const serviceID="service_0msompt";
-        const templateID="template_oq5ythm";
-        const publicKey="57gtqG9dkIQA7jiEC";
-        const  templateParams={
-          name:name,
-          date:date,
-          person:person,
-          phone:phone,
-          camping:camping,
-        }
-        //send emailss
-        
-        if(name===" " ||date===null||phone===" "||person===" "||camping===" ")
-        {
-         seterrorMessage("Booking is not done! Try Again")
-          
-        }
-        else{
-          emailjs.send(serviceID,templateID,templateParams,publicKey)
-           setMessage("Successfully ! We will contact you within 24 hours")
-        }
-      }
-    return(
-        <>
-         <div className="container d-none d-md-block shadow-lg  bg-grey rounded " style={{height:"auto",width:"100%",backgroundColor:"white",transform:"translateY(-20%)"}}>
-        <div className="mx-2">
-         <p style={{color:"black",transform:"translateY(50%)",fontWeight:"700",fontSize}}>Book Now!</p>
-        <div className="row">
-        <div className="row col-4 mt-5 mb-5">
-         <div className="col-6">
-        <input style={{width:"100%",height:"100%", border: "2px solid #389B87", // Default border color
-         backgroundColor:"#F6F6F6"}} type="name" placeholder="Name"  onChange={(e)=>setName(e.target.value)}/>
-        </div>
-        <div className="col-6">
-        <DatePicker  onChange={handleDateChange} selected={date} placeholderText="mm/dd/yyyy"
-         className="custom-datepicker"/>
-        </div>
-         </div>
-         <div className="row col-4 mt-5 mb-5">
-        <div className="col-6">
-        <input style={{width:"100%",height:"100%",border: "2px solid #389B87", // Default border color
-        backgroundColor:"#F6F6F6"}} type="number" placeholder="Person" onChange={(e)=>setPerson(e.target.value)}/>
-        </div>
-        <div className="col-6">
-        <input style={{width:"100%",height:"100%",border: "2px solid ", // Default border color
-         backgroundColor:"#F6F6F6"}} type="text" placeholder="Contact No"    onChange={(e)=>setPhone(e.target.value)}/>
-        </div>
-         </div>
-         <div className="row col-4 mt-5 mb-5">
-        <div className="col-6">
-        <select id="dropdown" style={{width:"100%",height:"100%",border: "2px solid #389B87", // Default border color
-        backgroundColor:"#F6F6F6"}}  onChange={(e)=>setCamping(e.target.value)}>
-        <option >Beach camping Balapitiya</option>
-        <option >Wild camping Maduwa</option>
-      </select>
-        </div>
-        <div className="col-6 ">
-        <Button onClick={submitBoking} onMouseEnter={submitForm} style={{width:"100%",height:"100%",backgroundColor:isSubmit?"#fcb900":"#389B87",borderColor:isSubmit?"#fcb900":"#389B87"}} > <AiOutlineForm  size={25}  /> &nbsp;Submit</Button>
-        </div>
-         </div>
-        </div>
-        </div>
-        <p  style={{color:"#389B87"}}>{message}</p>
-        <p  style={{color:"red"}}>{errormessage}</p>
+function Book() {
+  const [form, setForm] = useState({
+    name: "",
+    date: null,
+    person: "",
+    phone: "",
+    camping: "Oruwella Beach camping",
+  });
+
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange = (key, value) => {
+    setForm({ ...form, [key]: value });
+  };
+
+  const submitBooking = () => {
+ if (
+    !form.name.trim() ||
+    !form.date ||
+    !form.person.trim() ||
+    !form.phone.trim()
+  ) {
+    setError("Booking failed. Please fill all required fields.");
+    setTimeout(() => {
+    setError("");
+    setForm({
+      name: "",
+      date: null,
+      person: "",
+      phone: "",
+      camping: "Oruwella Beach camping",
+    });
+  }, 5000);
+    return;
+  }
+
+  emailjs.send(
+    "service_0msompt",
+    "template_oq5ythm",
+    {
+      name: form.name,
+      date: format(new Date(form.date), "dd/MM/yyyy"),
+      person: form.person,
+      phone: form.phone,
+      camping: form.camping,
+    },
+    "57gtqG9dkIQA7jiEC"
+  );
+
+  setMessage("Booking successful! We will contact you within 24 hours.");
+
+  setTimeout(() => {
+    setMessage("");
+    setError("");
+    setForm({
+      name: "",
+      date: null,
+      person: "",
+      phone: "",
+      camping: "Oruwella Beach camping",
+    });
+  }, 5000);
+};
+
+
+  return (
+    <div className="container" style={{transform:"translateY(-20%)"}}>
+      <div className="card shadow-lg border-0 p-4">
+        <h3 className="text-center fw-bold mb-4" style={{ color: "#389B87" }}>
+      Make Beautiful Memories With Us
+        </h3>
+           <img className="mx-auto mb-3" src="./logocamping.jpg" alt="logocamping" style={{height:"100px",width:"120px",borderRadius: "100%"}} />
+       <div className="row g-3">
+          <div className="col-6 col-md-4">
+            <input
+              className="form-control custom-input"
+              placeholder="Name"
+             value={form.name || ""}
+              onChange={(e) => handleChange("name", e.target.value)}
+            />
+          </div>
+
+          <div className="col-6 col-md-4">
+            <input
+           type="date"
+           className="form-control custom-input"
+           value={form.date || ""}
+           onChange={(e) => handleChange("date", e.target.value)}
+          />
+          </div>
+
+          <div className="col-6 col-md-4">
+            <input
+              type="number"
+              className="form-control custom-input"
+              placeholder="No of Persons"
+              value={form.person || ""}
+              onChange={(e) => handleChange("person", e.target.value)}
+            />
+          </div>
+
+          <div className="col-6 col-md-4">
+            <input
+              className="form-control custom-input"
+              placeholder="Contact Number"
+              value={form.phone || ""}
+              onChange={(e) => handleChange("phone", e.target.value)}
+            />
+          </div>
+
+          <div className="col-6 col-md-4">
+            <select
+              className="form-select custom-input"
+              onChange={(e) => handleChange("camping", e.target.value)}
+            >
+              <option>Oruwella Beach camping</option>
+            </select>
+          </div>
+
+          <div className="col-6 col-md-4 d-grid">
+            <Button
+              onClick={submitBooking}
+              style={{
+                backgroundColor: "#389B87",
+                borderColor: "#389B87",
+              }}
+            >
+              <AiOutlineForm size={22} /> &nbsp;Booking
+            </Button>
+          </div>
         </div>
 
-        <div className="container d-block d-md-none shadow-lg  bg-grey rounded" style={{height:"auto",width:"100%",backgroundColor:"#ffff"}}>
-          <div className="text-center">
-         <p style={{color:"black",transform:"translateY(50%)",fontWeight:"700",fontSize}}>Book Now!</p>
-         </div>
-         <div className="coloumn">
-          <div className="col-12 mt-4">
-        <input style={{width:"100%",height:"40px", border: "2px solid #389B87", // Default border color
-         backgroundColor:"#F6F6F6"}} type="name" placeholder="Name" onChange={(e)=>setName(e.target.value)}/>
-          </div>
-          <div className="d-flex col-12 gap-3">
-          <div className="col-3" >
-        <DatePicker placeholderText="Select date"  onChange={handleDateChange} 
-         className="custom-datepicker-mobile mt-3"
-         />
-          </div>
-          <div className="col-9 mt-3">
-        <input style={{width:"95%",height:"40px",border: "2px solid ", // Default border color
-        backgroundColor:"#F6F6F6"}} type="text" value={formattedDate} placeholder="dd/mm/yyyy"/>
-        </div>
-         </div>
-        <div className="col-12 mt-3">
-        <input style={{width:"100%",height:"40px",border: "2px solid #389B87", // Default border color
-         backgroundColor:"#F6F6F6"}} type="number" placeholder="Person"  onChange={(e)=>setPerson(e.target.value)}/>
-        </div>
-        <div className="col-12 mt-3">
-        <input style={{width:"100%",height:"40px",border: "2px solid ", // Default border color
-        backgroundColor:"#F6F6F6"}} type="text" placeholder="Contact No"  onChange={(e)=>setPhone(e.target.value)} />
-        </div>
-        <div className="col-12 mt-3">
-        <select id="dropdown" style={{width:"100%",height:"40px",border: "2px solid #389B87", // Default border color
-        backgroundColor:"#F6F6F6"}}  onChange={(e)=>setCamping(e.target.value)}>
-        <option >Beach camping Balapitiya</option>
-        <option >Wild camping Maduwa</option>
-      </select>
-        </div>
-        <div className="col-12 mt-3">
-        <Button className="mb-3" onClick={submitBoking} onMouseEnter={submitForm} style={{width:"100%",height:"40px",backgroundColor:"#389B87",borderColor:"#389B87"}}><AiOutlineForm  size={25}  /> &nbsp;Submit</Button>
-        </div>
-         </div>
-         <p style={{color:"#389B87"}}>{message}</p>
-        <p  style={{color:"red"}}>{errormessage}</p>
-        </div>
-        </>
-    )
+        {message && <p className="text-success mt-3">{message}</p>}
+        {error && <p className="text-danger mt-3">{error}</p>}
+      </div>
+    </div>
+  );
 }
+
 export default Book;

@@ -6,11 +6,7 @@ import { FaReadme } from "react-icons/fa";
 function Card4()
 {
     const handleButtonClick = () => {
-        const articleSection = document.getElementById('artical');
-    
-        if (articleSection) {
-          articleSection.scrollIntoView({ behavior: 'smooth' });
-        }
+       
       };
     return(
         <>

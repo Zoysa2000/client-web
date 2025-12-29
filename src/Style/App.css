@@ -3,8 +3,8 @@
   {
     background-repeat: no-repeat;
     background-size: cover;
-    height:600px;
-    background-position:bottom; 
+    height:650px;
+    background-position:top; 
     
   }
   .bg-image-large-support
@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height:500px;
-    background-position:top;
+    background-position:bottom;
     background-attachment: fixed; 
     
   }
@@ -24,8 +24,17 @@
 
 }
 
+.custom-input {
+  border: 2px solid #ced4da;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
 
-  .review-back-image
+.custom-input:focus {
+  border-color: #389B87;
+  box-shadow: 0 0 0 0.2rem rgba(56, 155, 135, 0.25);
+}
+
+.review-back-image
   {
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,16 +66,7 @@
   {
     color: rgba(238, 238, 238, 0.0)
   }
-  .custom-datepicker {
-   height: 40px;
-   background-Color:"#F6F6F6";
-   border-color: black;
-  }
-  .custom-datepicker-mobile {
-  background-color:#F6F6F6 ;
-  height: 40px;
-  width: 85px;
-  }
+
   .custom-file-upload {
     border: 1px solid #ffff;
     display: inline-block;
@@ -99,13 +99,6 @@
     line-height: 10px;
     font-size:medium;  
   }
-.bg-image-count
-{
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
 .container-button {
   position: relative;
  
