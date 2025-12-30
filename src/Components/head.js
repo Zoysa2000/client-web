@@ -11,7 +11,6 @@ function Head()
 {
     const[isbuttonClicked,setbuttonClicked]=useState(false)
     const backgroundImageUrl = './image.png';
-    const backgroundImageUrl01 = './image.png';
     const buttonclick=()=>
     {
     setbuttonClicked(!isbuttonClicked);
@@ -49,7 +48,7 @@ function Head()
           </div>
         </div>
         </div>
-        <div className='bg-image-small d-block d-md-none' style={{backgroundImage:`url(${backgroundImageUrl01})`}}>
+        <div className='bg-image-small d-block d-md-none' style={{backgroundImage:`url(${backgroundImageUrl})`}}>
         <Navpanel/>
         <div className="container d-block d-md-none">
           <div className="row text-center">

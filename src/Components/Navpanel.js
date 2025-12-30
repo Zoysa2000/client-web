@@ -36,7 +36,7 @@ function Navpanel()
     
   return(
     <>
-     <nav id="navbar" className="navbar navbar-expand-md d-block d-md-block"  style={{backgroundColor:"rgba(238, 238, 238, 0.2)"}} >
+     <nav id="navbar" className="navbar navbar-expand-md d-block d-md-block"  style={{backgroundColor:"#389B87"}} >
       <div className="container">
         <img className="navbar-brand d-sm-block d-none" src="./logocamping.jpg" alt="logocamping" style={{height:"90px",width:"100px"}} />
         <img className="navbar-brand d-block d-sm-none mx-2" src="./logocamping.jpg" alt="logocamping" style={{height:"60px",width:"60px",borderRadius: "100%"}} />
