@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { IoCall } from "react-icons/io5";
-function Card3()
+function Card2()
 {
     return(
         <>
@@ -26,4 +26,4 @@ function Card3()
         </>
     )
 }
-export default Card3;
+export default Card2;

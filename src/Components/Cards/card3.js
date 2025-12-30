@@ -3,7 +3,7 @@ import { PiNewspaperClipping } from "react-icons/pi";
 import { Bounce } from "react-reveal";
 import { Button } from "react-bootstrap";
 import { FaReadme } from "react-icons/fa";
-function Card4()
+function Card3()
 {
     const handleButtonClick = () => {
        
@@ -25,4 +25,4 @@ function Card4()
         </>
     )
 }
-export default Card4;
+export default Card3;

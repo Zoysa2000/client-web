@@ -4,7 +4,7 @@ import { FaCompass } from "react-icons/fa";
 import { GiBurningTree } from "react-icons/gi";
 import { Bounce } from "react-reveal";
 
-function Component1() {
+function Introduction() {
 
 
   const features = [
@@ -92,4 +92,4 @@ function Component1() {
   );
 }
 
-export default Component1;
+export default Introduction;

@@ -3,7 +3,7 @@ import { Bounce } from "react-reveal";
 import { IoIosBonfire } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import { GrSupport } from "react-icons/gr";
-function Component4()
+function Available()
 {
     return(
         <>
@@ -64,4 +64,4 @@ function Component4()
     )
 }
 
-export default Component4;
+export default Available;

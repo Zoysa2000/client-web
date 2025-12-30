@@ -2,7 +2,7 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-const Component2 = () => {
+const ImagesCarousel = () => {
   const handleDragStart = (e) => e.preventDefault();
 
   const items = [
@@ -77,4 +77,4 @@ const Component2 = () => {
   );
 };
 
-export default Component2;
+export default ImagesCarousel;
