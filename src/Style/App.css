@@ -1,21 +1,21 @@
 
-  .bg-image-large
-  {
+.bg-image-large
+{
     background-repeat: no-repeat;
     background-size: cover;
-    height:650px;
+    height:600px;
     background-position:top; 
     
-  }
-  .bg-image-large-support
-  {
+}
+.bg-image-support
+{
     background-repeat: no-repeat;
     background-size: cover;
     height:500px;
     background-position:bottom;
     background-attachment: fixed; 
     
-  }
+}
   .carousel-img {
   width: 100%;
   height: 300px;
@@ -35,39 +35,31 @@
 }
 
 .review-back-image
-  {
+{
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;  
-  }
+}
 
-  .bg-image-small
-  {
+.bg-image-small
+{
     background-repeat: no-repeat;
     background-size: cover;
     height:auto;
     background-position:right; 
-  }
-  .bg-image-small-support
-  {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:350px;
-    background-position:bottom; 
-    background-attachment: fixed; 
+}
 
-  }
-  li 
-  {
+li 
+{
   text-decoration: none;
   color:#fff;
-  }
-  #nav-toggle-button
-  {
+}
+#nav-toggle-button
+{
     color: rgba(238, 238, 238, 0.0)
-  }
+}
 
-  .custom-file-upload {
+.custom-file-upload {
     border: 1px solid #ffff;
     display: inline-block;
     padding: 6px 10px;
@@ -76,29 +68,29 @@
     width: 80%;
   }
   
-  .custom-file-upload span {
+.custom-file-upload span {
     margin-right: 5px;
     color:black;
-  }
-  .number
-  {
+}
+.number
+{
     font-weight: 900;
     font-family: sans-serif;
-  }
-  .text-large
-  {
+}
+.text-large
+{
     color:black;
     font-weight: 700;
     line-height: 20px;
     font-size:xx-large;
-  }
-  .text-small
-  {
+}
+.text-small
+{
     color: black;
     font-weight: 700;
     line-height: 10px;
     font-size:medium;  
-  }
+}
 .container-button {
   position: relative;
  

@@ -3,7 +3,7 @@ import { SlCalender } from "react-icons/sl";
 import { Bounce } from "react-reveal";
 import ReactWhatsapp from "react-whatsapp";
 import { FaWhatsapp } from "react-icons/fa";
-function Card2()
+function Card1()
 {
     return(
         <>
@@ -23,4 +23,4 @@ function Card2()
         </>
     )
 }
-export default Card2;
+export default Card1;

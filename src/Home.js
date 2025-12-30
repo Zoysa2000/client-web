@@ -2,11 +2,11 @@ import React from "react";
 import './Style/App.css';
 import Book from "./Components/book";
 import 'react-datepicker/dist/react-datepicker.css';
-import Component1 from "./Components/component1";
-import Component2 from "./Components/component2";
-import Component4 from "./Components/component4";
+import Introduction from "./Components/Intoduction";
+import ImagesCarousel from "./Components/ImagesCarousel";
+import Available from "./Components/Available";
 import Gallery from "./Components/gallery";
-import Component5 from "./Components/component5";
+import CardLibrary from "./Components/CardLibrary";
 import Footer from "./Components/footer";
 import Location from "./Components/location";
 import Video from "./Components/video";
@@ -24,15 +24,15 @@ function Home() {
         <Book/>
         </section>
         <section id="about">
-        <Component1/>
+        <Introduction/>
         </section>
-        <Component2/>
-        <Component4/>
+        <ImagesCarousel/>
+        <Available/>
         <section id="video">
         <Video/>
         </section>
         <Gallery/>
-        <Component5/>
+        <CardLibrary/>
         <section id="location">
         <Location/>
         </section>
