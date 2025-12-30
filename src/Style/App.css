@@ -7,7 +7,7 @@
     background-position:top; 
     
   }
-  .bg-image-large-support
+  .bg-image-support
   {
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,15 +48,7 @@
     height:auto;
     background-position:right; 
   }
-  .bg-image-small-support
-  {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height:350px;
-    background-position:bottom; 
-    background-attachment: fixed; 
-
-  }
+  
   li 
   {
   text-decoration: none;

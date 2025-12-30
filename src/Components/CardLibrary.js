@@ -15,8 +15,7 @@ function CardLibrary() {
           opacity: 0.9,
         }}
       />
-
-      <div className="container col-12" style={{ transform: "translateY(-15%)" }}>
+      <div className="container col-12" style={{ transform: "translateY(-20%)" }}>
         <div className="row">
           <div className="col-12 col-md-4 mb-3">
             <Card1 />
