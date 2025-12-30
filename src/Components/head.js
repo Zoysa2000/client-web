@@ -5,6 +5,8 @@ import { Bounce } from "react-reveal";
 import Navpanel from "./Navpanel";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
+import Typewriter from "typewriter-effect";
+
 
 
 function Head()
@@ -31,9 +33,21 @@ function Head()
         <div className="container">
           <div className="row">
           <div className="col-md-7 mx-2" style={{color:"white",textAlign:"left",fontSize:"40px",fontWeight:"bold",lineHeight:"50px",marginTop:"120px"}}>
-            <Bounce bottom duration={3000}>
-            <p>CAMPING IS MORE THAN JUST A WORD, IT’S AN EXPERIENCE!</p>
-            </Bounce>
+              <Bounce>
+      <p>
+        <Typewriter
+          options={{
+            strings: [
+              "CAMPING IS MORE THAN JUST A WORD, IT’S AN EXPERIENCE!"
+            ],
+            autoStart: true,
+            loop: true,
+            delay: 50,
+            cursor: "|",
+          }}
+        />
+      </p>
+      </Bounce>
             </div>
             <div className="mx-2">
               <Bounce top duration={3000}>

@@ -4,6 +4,8 @@ import { Button } from "react-bootstrap";
 import { format } from "date-fns";
 import emailjs from "@emailjs/browser";
 import "react-datepicker/dist/react-datepicker.css";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 function Book() {
   const [form, setForm] = useState({
@@ -20,6 +22,7 @@ function Book() {
   const handleChange = (key, value) => {
     setForm({ ...form, [key]: value });
   };
+const [captchaValue, setCaptchaValue] = useState(null);
 
   const submitBooking = () => {
  if (
@@ -31,13 +34,6 @@ function Book() {
     setError("Booking failed. Please fill all required fields.");
     setTimeout(() => {
     setError("");
-    setForm({
-      name: "",
-      date: null,
-      person: "",
-      phone: "",
-      camping: "Oruwella Beach camping",
-    });
   }, 5000);
     return;
   }
@@ -54,6 +50,13 @@ function Book() {
     },
     "57gtqG9dkIQA7jiEC"
   );
+  if (!captchaValue) {
+      setError("Please verify CAPTCHA");
+      setTimeout(() => {
+         setError("");
+       }, 5000);
+      return;
+    }
 
   setMessage("Booking successful! We will contact you within 24 hours.");
 
@@ -67,8 +70,9 @@ function Book() {
       phone: "",
       camping: "Oruwella Beach camping",
     });
-  }, 5000);
+  }, 10000);
 };
+
 
 
   return (
@@ -136,6 +140,13 @@ function Book() {
               <AiOutlineForm size={22} /> &nbsp;Booking
             </Button>
           </div>
+        <div className="col-6 col-md-4">
+        <ReCAPTCHA
+        sitekey="6LcjFjssAAAAALLS_ElXXDqWzhhR92L0XZBNXxNX"
+         onChange={(value) => setCaptchaValue(value)}
+     
+      />
+        </div>
         </div>
 
         {message && <p className="text-success mt-3">{message}</p>}
