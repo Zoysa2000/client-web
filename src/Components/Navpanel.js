@@ -22,7 +22,7 @@ function Navpanel()
           if (isScrolled) {
             navbar.style.backgroundColor = '#389B87'; 
           } else {
-            navbar.style.backgroundColor = 'rgba(238, 238, 238, 0.2)';
+            navbar.style.backgroundColor = '#389B87';
           }
         }
       };

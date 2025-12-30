@@ -42,8 +42,8 @@ function Head()
               </Bounce>
             </div>
             <div className="mx-2">
-            <Button onClick={handleButtonClick} onMouseEnter={buttonclick}   style={{fontSize:"18px",height:"45px",fontWeight:"700",backgroundColor:isbuttonClicked ? "#fcb900":"#389B87",
-            borderColor:isbuttonClicked ?"#fcb900":"#389B87"}}>
+            <Button onClick={handleButtonClick} onMouseEnter={buttonclick}   style={{fontSize:"18px",height:"45px",fontWeight:"600",backgroundColor: "#fcb900",
+            borderColor:"#fcb900"}}>
            <RiCompassDiscoverLine size={25}/>&nbsp; Discover More</Button>
             </div>
           </div>
@@ -64,7 +64,7 @@ function Head()
             </Bounce>
             </div>
             <div>
-            <Button onClick={handleButtonClick} onMouseEnter={buttonclick}  style={{fontWeight:"700",backgroundColor:isbuttonClicked ? "#fcb900" :"#389B87",borderColor:isbuttonClicked ? "#fcb900" :"#389B87",transform: "translateY(-250%)"}}>
+            <Button onClick={handleButtonClick} onMouseEnter={buttonclick}  style={{fontWeight:"600",backgroundColor :"#fcb900" ,borderColor: "#fcb900",transform: "translateY(-250%)"}}>
             <RiCompassDiscoverLine size={25}/>&nbsp;Discover More</Button>
             </div>
           </div>
