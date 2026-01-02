@@ -13,6 +13,9 @@ import Video from "./Components/video";
 import Clientsay from "./Components/clientsay";
 import Head from "./Components/head";
 import Fixbutton from "./Components/fixbutton";
+import LanguageSelector from "./Components/LanguageSelector";
+import TranslationIcon from "./Components/TranslationIcon";
+import WhatsappFix from "./Components/WhatsappFix";
 function Home() {
   return (
     <>
@@ -40,6 +43,9 @@ function Home() {
         <Clientsay/>
         </section>
         <Fixbutton/>
+        <LanguageSelector/>
+        <TranslationIcon/>
+        <WhatsappFix/>
         <Footer/>
         </div>
       </>  
