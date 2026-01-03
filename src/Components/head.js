@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect";
 import { LanguageContext } from "../ContextAPI/LanguageContext";
 
 function Head() {
-  const { headertext } = useContext(LanguageContext); // get dynamic text from context
+  const { headertext } = useContext(LanguageContext);
   const [isbuttonClicked, setbuttonClicked] = useState(false);
 
   const backgroundImageUrl = "./image1.png";
