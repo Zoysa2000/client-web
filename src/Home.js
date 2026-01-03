@@ -9,7 +9,6 @@ import Gallery from "./Components/gallery";
 import CardLibrary from "./Components/CardLibrary";
 import Footer from "./Components/footer";
 import Location from "./Components/location";
-import Video from "./Components/video";
 import Clientsay from "./Components/clientsay";
 import Head from "./Components/head";
 import Fixbutton from "./Components/fixbutton";
@@ -28,9 +27,6 @@ function Home() {
         </section>
         <ImagesCarousel/>
         <Available/>
-        <section id="video">
-        <Video/>
-        </section>
         <Gallery/>
         <CardLibrary/>
         <section id="location">
