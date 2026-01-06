@@ -8,7 +8,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { LanguageContext } from "../ContextAPI/LanguageContext";
 
 function Book() {
-  const { language, bookingtext } = useContext(LanguageContext);
+  const { bookingtext } = useContext(LanguageContext);
 
   const [form, setForm] = useState({
     name: "",
