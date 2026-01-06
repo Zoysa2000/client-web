@@ -1,53 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../ContextAPI/LanguageContext";
 import { IoIosBonfire } from "react-icons/io";
 import { FaCompass } from "react-icons/fa";
 import { GiBurningTree } from "react-icons/gi";
 import { Bounce } from "react-reveal";
 
 function Introduction() {
+  const { introductiontext } = useContext(LanguageContext);
 
-
-  const features = [
-    {
-      icon: <IoIosBonfire />,
-      title: "Luxury Camping",
-      desc: "Campers revel in the outdoors with provided Camping tents, BBQ machines, Bonfire, Washroom facilities, and delicious food."
-    },
-    {
-      icon: <GiBurningTree />,
-      title: "Nature Experience",
-      desc: "Wild camping and beach camping fuse into immersive nature odysseys."
-    },
-    {
-      icon: <FaCompass />,
-      title: "Adventure Journey",
-      desc: "Explore the Madu River boat safari filled with excitement and discovery."
-    }
-  ];
+  const featuresIcons = [<IoIosBonfire />, <GiBurningTree />, <FaCompass />];
 
   return (
     <div className="container">
       <div className="row align-items-center">
-
         <div className="col-12 col-md-6">
-          <h4 style={{ color: "#fcb900", fontWeight: 700 }}>WHO WE ARE</h4>
+          <h4 style={{ color: "#fcb900", fontWeight: 700 }}>
+            {introductiontext.sectionTitle}
+          </h4>
 
           <p
             className="fw-bold"
-            style={{
-              fontSize: "clamp(25px, 4vw, 40px)",
-              lineHeight: "1.3"
-            }}
+            style={{ fontSize: "clamp(25px, 4vw, 40px)", lineHeight: "1.3" }}
           >
-            Oruwella Beach Camping
+            {introductiontext.heading}
           </p>
 
-          <p>
-            Oruwella offers wild camping in Maduwa and beach camping in
-            Balapitiya, creating unforgettable and tranquil experiences.
-          </p>
+          <p>{introductiontext.description}</p>
 
-          {features.map((item, index) => (
+          {introductiontext.features.map((item, index) => (
             <div className="row mt-3" key={index}>
               <div className="col-3">
                 <div
@@ -61,7 +41,7 @@ function Introduction() {
                   }}
                 >
                   <Bounce duration={4000}>
-                    {React.cloneElement(item.icon, {
+                    {React.cloneElement(featuresIcons[index], {
                       color: "white",
                       size: 40
                     })}
@@ -71,13 +51,12 @@ function Introduction() {
               <div className="col-9">
                 <h5 className="fw-bold">{item.title}</h5>
                 <p>{item.desc}</p>
-                </div>
+              </div>
             </div>
           ))}
         </div>
 
         <div className="col-12 col-md-6 text-center mt-4 mt-md-0">
-
           <Bounce right duration={4000}>
             <img
               src="./image01.jpg"
@@ -93,3 +72,4 @@ function Introduction() {
 }
 
 export default Introduction;
+
