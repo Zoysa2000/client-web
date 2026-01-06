@@ -1,8 +1,6 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-
-
 function Reviewcard(props)
 {
     return(

@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height:600px;
-    background-position:top; 
+    background-position:bottom; 
     
 }
 .bg-image-support
@@ -46,7 +46,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height:auto;
-    background-position:right; 
+    background-position:center; 
 }
 
 li 
@@ -102,8 +102,14 @@ li
   right: 20px;
   
 }
+.fixed-button-whtsapp {
+  position: fixed;
+  bottom: 70px; 
+  right: 1px;
+  
+}
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 6px; 
 }
 
 ::-webkit-scrollbar-thumb {
