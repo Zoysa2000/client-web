@@ -3,21 +3,18 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "thilina123/camping-app"
-        DOCKER_TAG   = "latest"
+        DOCKER_TAG   = "${BUILD_NUMBER}"
     }
 
     stages {
 
-
-        stage('Check Docker') {
-            steps {
-                bat 'docker --version'
-            }
-        }
-
         stage('Docker Build') {
             steps {
-                bat "docker build -t %DOCKER_IMAGE%:%DOCKER_TAG% ."
+                bat '''
+                set DOCKER_BUILDKIT=0
+                set COMPOSE_DOCKER_CLI_BUILD=0
+                docker build --no-cache --platform=linux/amd64 -t %DOCKER_IMAGE%:%DOCKER_TAG% .
+                '''
             }
         }
 
@@ -28,8 +25,12 @@ pipeline {
                     usernameVariable: 'USERNAME',
                     passwordVariable: 'PASSWORD'
                 )]) {
-                    bat 'echo %PASSWORD% | docker login -u %USERNAME% --password-stdin'
-                    bat "docker push %DOCKER_IMAGE%:%DOCKER_TAG%"
+                    bat '''
+                    echo %PASSWORD% | docker login -u %USERNAME% --password-stdin
+                    docker push %DOCKER_IMAGE%:%DOCKER_TAG%
+                    docker tag %DOCKER_IMAGE%:%DOCKER_TAG% %DOCKER_IMAGE%:latest
+                    docker push %DOCKER_IMAGE%:latest
+                    '''
                 }
             }
         }
@@ -37,11 +38,10 @@ pipeline {
 
     post {
         success {
-            echo "Docker image pushed: ${env.DOCKER_IMAGE}:${env.DOCKER_TAG}"
+            echo "Docker image pushed"
         }
         failure {
             echo "Build FAILED"
         }
     }
 }
-
