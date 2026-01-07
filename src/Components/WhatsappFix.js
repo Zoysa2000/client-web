@@ -9,7 +9,7 @@ function WhatsAppButton() {
      className="fixed-button-whtsapp"
     >
       <img
-        src="./whatspp.png"
+        src="./whatspp.png" // whatsapp image
         alt="WhatsApp"
         style={{
           width: "100px",
