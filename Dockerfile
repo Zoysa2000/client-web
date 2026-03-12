@@ -8,7 +8,7 @@ RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
-# Runtime stage (Nginx)
+# create the minimum linux container with nginx web server
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
