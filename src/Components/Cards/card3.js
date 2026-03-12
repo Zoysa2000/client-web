@@ -1,32 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { PiNewspaperClipping } from "react-icons/pi";
 import { Bounce } from "react-reveal";
-import { Button } from "react-bootstrap";
 import { FaReadme } from "react-icons/fa";
 import { LanguageContext } from "../../ContextAPI/LanguageContext";
-import { useContext } from "react";
-function Card3()
-{
-    const handleButtonClick = () => {
-       
-      };
 
-    const {card3text} =  useContext(LanguageContext);
-    return(
-        <>
-        <div className="mt-5" style={{display: "flex",flexDirection: "column",justifyContent: "center",alignItems: "center",textAlign:"center",boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',backgroundColor:"white",height:"auto",width:"auto"}}>
-        <div className="mt-5" style={{backgroundColor:"#389B87",width:"70px",height:"70px",display: "flex",flexDirection: "column",justifyContent: "center",alignItems: "center",textAlign:"center"}}>
+function Card3() {
+  const handleButtonClick = () => {};
+  const { card3text } = useContext(LanguageContext);
+
+  return (
+    <div className="card-modern">
+      <div className="card-icon-box">
         <Bounce center duration={5000}>
-        <PiNewspaperClipping style={{color:"white",height:"40px",width:"40px"}} />
+          <PiNewspaperClipping color="#fcb900" size={30} />
         </Bounce>
-        </div>
-        <div style={{color:"black",fontFamily:"Sans-serif"}}>
-    <h4 className="mt-3"><b>{card3text.title}</b></h4>
-    <p style={{color:"black",padding:"20px"}}>{card3text.description}</p>
-    <Button onClick={handleButtonClick}  className="mb-4" style={{backgroundColor:"#389B87",borderColor:"#389B87",width:"50%"}}><FaReadme size={25}/>&nbsp;{card3text.readMore}</Button>
+      </div>
+
+      <h4 className="card-title">{card3text.title}</h4>
+      <div className="card-divider" />
+      <p className="card-desc">{card3text.description}</p>
+
+      <button className="card-btn-whatsapp" onClick={handleButtonClick}>
+        <FaReadme size={20} />
+        {card3text.readMore}
+      </button>
     </div>
-    </div>
-        </>
-    )
+  );
 }
+
 export default Card3;

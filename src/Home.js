@@ -31,9 +31,6 @@ function Home() {
         </section>
         <ImagesCarousel/>
         <Available/>
-        <section id="video">
-        <Video/>
-        </section>
         <Gallery/>
         <CardLibrary/>
         <section id="location">
