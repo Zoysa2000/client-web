@@ -17,7 +17,6 @@ function Introduction() {
 
         .intro-section {
           background: #060d1a;
-          padding: 6rem 1.5rem;
           font-family: 'Outfit', sans-serif;
           position: relative;
           overflow: hidden;
