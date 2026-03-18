@@ -193,7 +193,7 @@ const styles = `
 @media(max-width:767px){
 
 #micon{
-background:rgba(38,118,104,.95);
+background: linear-gradient(90deg, transparent, rgba(70, 120, 220, 0.25), transparent);
 backdrop-filter:blur(16px);
 border-radius:14px;
 margin-top:10px;

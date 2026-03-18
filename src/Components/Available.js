@@ -17,6 +17,7 @@ function Available() {
 
         .available-section {
           background: #060d1a;
+          padding: 15px;
           font-family: 'Outfit', sans-serif;
           position: relative;
           overflow: hidden;

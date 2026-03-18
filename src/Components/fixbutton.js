@@ -14,10 +14,21 @@ const Fixbutton = () => {
       }
     }
   return (
-    <div className="container-button">
-      <Button onClick={buttonclick} className="fixed-button" style={{backgroundColor:isbuttonClicked ? "#fcb900#389B87":"#fcb900",
-            borderColor:isbuttonClicked ?"#fcb900#389B87":"#fcb900"}}><MdKeyboardDoubleArrowUp size={25}/></Button>
-    </div>
+   <div className="container-button">
+  <Button
+    onClick={buttonclick}
+    className="fixed-button"
+    style={{
+      background: isbuttonClicked
+        ? "linear-gradient(135deg, #fcb900, #ff8c00)"
+        : "linear-gradient(135deg, #fcb900, #ff8c00)",
+      borderColor: "#fcb900"
+    }}
+  >
+    <MdKeyboardDoubleArrowUp size={25} />
+  </Button>
+</div>
+
   );
 };
 
