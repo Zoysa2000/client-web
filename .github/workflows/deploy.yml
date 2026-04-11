@@ -4,20 +4,26 @@ on:
   push:
     branches:
       - main   
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-      
-      - name: Install node modules
-        run: npm install
+        uses: actions/checkout@v4
 
-      - name: Run build
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install node modules
+        run: npm ci
+
+      - name:  Run build
         run: npm run build
-      
+
       
 
 
