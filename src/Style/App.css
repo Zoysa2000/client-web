@@ -113,7 +113,8 @@ li
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #389B87; 
+background: linear-gradient(135deg, #fcb900, #ff8c00);
+
   border-radius: 6px; 
 }
 

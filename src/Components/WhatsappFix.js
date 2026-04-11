@@ -12,8 +12,8 @@ function WhatsAppButton() {
         src="./whatspp.png" // whatsapp image
         alt="WhatsApp"
         style={{
-          width: "100px",
-          height: "100px",
+          width: "80px",
+          height: "80px",
           cursor: "pointer"
         }}
       />
