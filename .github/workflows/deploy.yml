@@ -21,10 +21,16 @@ jobs:
       - name: Install node modules
         run: npm ci --legacy-peer-deps
 
-      - name:  Run build
+      - name: Run build
         run: npm run build
-      
-      
+
+      - name: Connect to EC2 Instance
+      - run |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_KEY }}" > ~/.ssh/key.pem
+          chmod 600 ~/.ssh/key.pem
+        
+
 
       
 
