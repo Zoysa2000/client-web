@@ -30,10 +30,14 @@ jobs:
           echo "${{ secrets.EC2_KEY }}" > ~/.ssh/key.pem
           chmod 600 ~/.ssh/key.pem
       
-      - name: Connect to EC2
-        run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}
-          echo "echo Connected successfully"
+      - name: Deploy to EC2
+        uses: appleboy/scp-action@v0.1.4
+        with:
+         host: ${{ secrets.EC2_HOST }}
+         username: ${{ secrets.EC2_USER }}
+         key: ${{ secrets.EC2_KEY }}
+         source: "build/*"
+         target: "/home/ubuntu/project"
 
 
            
