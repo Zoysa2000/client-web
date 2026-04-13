@@ -344,7 +344,6 @@ const ImagesCarousel = () => {
             infinite
             disableButtonsControls
             disableDotsControls={false}
-            onSlideChanged={(e) => setActiveIndex(e.item)}
           />
         </div>
  </section>
