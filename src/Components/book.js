@@ -198,7 +198,7 @@ function Book() {
           letter-spacing: 0.14em;
           text-transform: uppercase;
           padding-left: 2px;
-         background: linear-gradient(135deg, #ffffff, #e8e8e8);
+          background: linear-gradient(135deg, #ffffff, #e8e8e8);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -218,6 +218,7 @@ function Book() {
           outline: none;
           -webkit-appearance: none;
           color-scheme: dark;
+          box-sizing: border-box;
         }
 
         .field-input::placeholder {
@@ -260,6 +261,11 @@ function Book() {
         .captcha-wrap {
           display: flex;
           align-items: center;
+          overflow: hidden;
+        }
+
+        .captcha-wrap > div {
+          transform-origin: left center;
         }
 
         .submit-btn {
@@ -318,10 +324,43 @@ function Book() {
         }
 
         @media (max-width: 520px) {
-          .fields-grid { grid-template-columns: 1fr; }
-          .book-card { padding: 2rem 1.5rem; }
-          .bottom-row { grid-template-columns: 1fr; }
-          .captcha-wrap { justify-content: center; }
+          .book-card {
+            padding: 2rem 1.5rem;
+          }
+
+          .fields-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .bottom-row {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+
+          .captcha-wrap {
+            justify-content: center;
+            width: 100%;
+          }
+
+          .captcha-wrap > div {
+            transform: scale(0.82);
+            transform-origin: center center;
+          }
+
+          .submit-btn {
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .book-card {
+            padding: 1.5rem 1rem;
+          }
+
+          .captcha-wrap > div {
+            transform: scale(0.72);
+            transform-origin: center center;
+          }
         }
       `}</style>
 
@@ -333,7 +372,6 @@ function Book() {
             </div>
             <div style={{ textAlign: "center" }}>
               <p className="book-subtitle">Reserve Your Spot</p>
-
             </div>
           </div>
 
