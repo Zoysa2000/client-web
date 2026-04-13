@@ -7,12 +7,12 @@ const ImagesCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [
-    { src: "./image07.jpg", alt: "slide-1", label: "Beach Vibes" },
-    { src: "./image02.jpg", alt: "slide-2", label: "Wild Nature" },
-    { src: "./image16.jpg", alt: "slide-3", label: "Campfire Nights" },
-    { src: "./image04.jpg", alt: "slide-4", label: "Sunrise Views" },
-    { src: "./image06.jpg", alt: "slide-5", label: "River Safari" },
-    { src: "./p3.png",      alt: "slide-6", label: "Star Gazing" },
+    { src: "./image07.jpg", alt: "slide-1" },
+    { src: "./image02.jpg", alt: "slide-2" },
+    { src: "./image16.jpg", alt: "slide-3" },
+    { src: "./image04.jpg", alt: "slide-4" },
+    { src: "./image06.jpg", alt: "slide-5" },
+    { src: "./p3.png",      alt: "slide-6"},
   ];
 
   const items = slides.map((slide, i) => (
@@ -349,21 +349,7 @@ const ImagesCarousel = () => {
             onSlideChanged={(e) => setActiveIndex(e.item)}
           />
         </div>
-
-        {/* Thumbnail strip */}
-        <div className="ci-thumbs">
-          {slides.map((slide, i) => (
-            <img
-              key={i}
-              src={slide.src}
-              alt={slide.alt}
-              className={`ci-thumb ${activeIndex === i ? "active" : ""}`}
-              title={slide.label}
-            />
-          ))}
-        </div>
-
-      </section>
+ </section>
     </>
   );
 };

@@ -21,6 +21,7 @@ function Available() {
           font-family: 'Outfit', sans-serif;
           position: relative;
           overflow: hidden;
+    
         }
 
         .available-section::before {
@@ -215,7 +216,7 @@ function Available() {
       `}</style>
 
       <section className="available-section">
-        <div className="available-inner">
+        <div className="available-inner ">
 
           {/* Left: Image */}
           <div className="available-image-wrap">

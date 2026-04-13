@@ -191,6 +191,9 @@ function Gallery() {
             gap: 0.5rem;
           }
         }
+      .contents {
+         display: contents;
+        }
       `}</style>
 
       <section className="gallery-section">
@@ -200,18 +203,18 @@ function Gallery() {
           <p className="gallery-subtitle">Click any photo to explore the full experience</p>
         </div>
 
-        <LightGallery onInit={onInit} plugins={[lgThumbnail, lgZoom]}>
-          <div className="gallery-grid">
-            {galleryImages.map((img, index) => (
-              <a href={img.src} key={index} className="gallery-item">
-                <img src={img.src} alt={img.alt} />
-                <div className="gallery-overlay">
-                  <div className="gallery-overlay-icon">⤢</div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </LightGallery>
+        <div className="gallery-grid">
+  <LightGallery onInit={onInit} plugins={[lgThumbnail, lgZoom]} elementClassNames="contents">
+    {galleryImages.map((img, index) => (
+      <a href={img.src} key={index} className="gallery-item" data-src={img.src}>
+        <img src={img.src} alt={img.alt} />
+        <div className="gallery-overlay">
+          <div className="gallery-overlay-icon">⤢</div>
+        </div>
+      </a>
+    ))}
+  </LightGallery>
+</div>
       </section>
     </>
   );
