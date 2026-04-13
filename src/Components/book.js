@@ -434,7 +434,7 @@ function Book() {
           <div className="bottom-row">
             <div className="captcha-wrap">
               <ReCAPTCHA
-                sitekey="6LcjFjssAAAAALLS_ElXXDqWzhhR92L0XZBNXxNX"
+                sitekey="6LeUnbUsAAAAALhv-Wl4GcjmUTQYxzooKmc-nvHS"
                 onChange={(value) => setCaptchaValue(value)}
                 theme="dark"
               />

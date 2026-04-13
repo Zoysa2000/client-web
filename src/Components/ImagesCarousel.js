@@ -1,10 +1,8 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { useState } from "react";
 
 const ImagesCarousel = () => {
   const handleDragStart = (e) => e.preventDefault();
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [
     { src: "./image07.jpg", alt: "slide-1" },
