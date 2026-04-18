@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Customer Service",
+    "description": "Our customer service is at your service 24/7, ensuring prompt assistance and satisfaction around the clock.",
+    "callButton": "CALL US",
+    "phone": "071 952 9582"
+  },
+  "ru": {
+    "title": "Служба поддержки клиентов",
+    "description": "Наша служба поддержки клиентов доступна для вас круглосуточно, обеспечивая быструю помощь и полное удовлетворение в любое время.",
+    "callButton": "ПОЗВОНИТЕ НАМ",
+    "phone": "071 952 9582"
+  }
+}

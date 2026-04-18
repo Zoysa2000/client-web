@@ -1,0 +1,51 @@
+import React from "react";
+import './Style/App.css';
+import Book from "./Components/book";
+import 'react-datepicker/dist/react-datepicker.css';
+import Introduction from "./Components/Intoduction";
+import ImagesCarousel from "./Components/ImagesCarousel";
+import Available from "./Components/Available";
+import Gallery from "./Components/gallery";
+import CardLibrary from "./Components/CardLibrary";
+import Footer from "./Components/footer";
+import Location from "./Components/location";
+import Clientsay from "./Components/clientsay";
+import Head from "./Components/head";
+import Fixbutton from "./Components/fixbutton";
+import LanguageSelector from "./Components/LanguageSelector";
+import TranslationIcon from "./Components/TranslationIcon";
+import WhatsappFix from "./Components/WhatsappFix";
+function Home() {
+  return (
+    <>
+    <div className="x-axis">
+       <section id="home">
+        <Head/>
+        </section>
+        <section id="book">
+        <Book/>
+        </section>
+        <section id="about">
+        <Introduction/>
+        </section>
+        <ImagesCarousel/>
+        <Available/>
+        <Gallery/>
+        <CardLibrary/>
+        <section id="location">
+        <Location/>
+        </section>
+        <section id="review">
+        <Clientsay/>
+        </section>
+        <Fixbutton/>
+        <LanguageSelector/>
+        <TranslationIcon/>
+        <WhatsappFix/>
+        <Footer/>
+        </div>
+      </>  
+  );
+}
+
+export default Home;
