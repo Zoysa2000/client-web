@@ -1,12 +1,12 @@
-name: Deploy to EC2
+name: Build and Update ArgoCD Manifest
 
 on:
   push:
     branches:
-      - main   
+      - main
 
 jobs:
-  deploy:
+  build-and-update:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,14 +24,29 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Login to the Docker Hub
+      - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      - name: Build the Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/client-web:latest . 
+      - name: Set image tag
+        run: echo "IMAGE_TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
 
-      - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/client-web:latest
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/client-web:${{ env.IMAGE_TAG }} .
+
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/client-web:${{ env.IMAGE_TAG }}
+
+      - name: Update Kubernetes manifest image
+        run: |
+          sed -i "s|image: .*client-web:.*|image: ${{ secrets.DOCKER_USERNAME }}/client-web:${{ env.IMAGE_TAG }}|g" k8s/client-web-deployment.yaml
+
+      - name: Commit and push 
+        run: |
+          git config user.name "thilina-dev"
+          git config user.email "thilinadezpysa2000@gmail.com"
+          git add k8s/client-web-deployment.yaml
+          git commit -m "Update client-web image to ${{ env.IMAGE_TAG }}" || echo "No changes to commit"
+          git push
 
 
            
