@@ -195,7 +195,7 @@ const LANGUAGES = [
     code: "ru",
     label: "Russian",
     native: "Русский",
-    flag: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png",
+    flag: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1280px-Flag_of_Russia.svg.png",
   },
 ];
 
