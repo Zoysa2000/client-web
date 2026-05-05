@@ -16,7 +16,7 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: client-web
-          image: thilina123/client-web:latest
+          image: thilina123/client-web:1259943
           imagePullPolicy: Always
           ports:
             - containerPort: 80
