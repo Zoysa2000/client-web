@@ -329,7 +329,7 @@ const ImagesCarousel = () => {
         {/* Header */}
         <div className="ci-header">
           <p className="ci-tag">Our Gallery</p>
-          <h2 className="ci-title">Moments from the Wild</h2>
+          <h2 className="ci-title">Moments from the Camping</h2>
           <p className="ci-subtitle">Drag to explore — hover to preview</p>
         </div>
 
