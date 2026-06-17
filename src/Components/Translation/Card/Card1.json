@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Booking & Services",
+    "description": "Conveniently book our services through WhatsApp or our user-friendly website, ensuring hassle-free reservations and experiences.",
+    "whatsappMessage": "Hello, I contacted you through the website and am interested in camping with you. Please give me more details about it.",
+    "chatButton": "CHAT US"
+  },
+  "ru": {
+    "title": "Бронирование и услуги",
+    "description": "Удобно бронируйте наши услуги через WhatsApp или наш удобный веб-сайт, обеспечивая простой и комфортный процесс бронирования.",
+    "whatsappMessage": "Здравствуйте, я связался с вами через сайт и заинтересован в кемпинге. Пожалуйста, дайте больше информации.",
+    "chatButton": "НАПИШИТЕ НАМ"
+  }
+}

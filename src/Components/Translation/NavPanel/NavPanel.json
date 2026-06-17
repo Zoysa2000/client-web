@@ -1,0 +1,16 @@
+{
+  "en": {
+    "home": "HOME",
+    "about": "ABOUT US",
+    "location": "LOCATIONS",
+    "review": "REVIEWS",
+    "book": "BOOK NOW"
+  },
+  "ru": {
+    "home": "ДОМОЙ",
+    "about": "О НАС",
+    "location": "ЛОКАЦИИ",
+    "review": "ОТЗЫВЫ",
+    "book": "ЗАБРОНИРОВАТЬ"
+  }
+}

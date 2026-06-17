@@ -1,0 +1,40 @@
+{
+  "en": {
+    "sectionTitle": "WHO WE ARE",
+    "heading": "Oruwella Beach Camping",
+    "description": "Oruwella offers Beach camping in Balapitiya, creating unforgettable and tranquil experiences.",
+    "features": [
+      {
+        "title": "Luxury Camping",
+        "desc": "Campers revel in the outdoors with provided Camping tents, BBQ machines, Bonfire, Washroom facilities, and delicious food."
+      },
+      {
+        "title": "Nature Experience",
+        "desc": "Beach camping fuse into immersive nature odysseys."
+      },
+      {
+        "title": "Adventure Journey",
+        "desc": "Explore the Madu River boat safari filled with excitement and discovery."
+      }
+    ]
+  },
+  "ru": {
+    "sectionTitle": "КТО МЫ",
+    "heading": "Кемпинг на пляже Орувелла",
+    "description": "Орувелла предлагает пляжный кемпинг в Балапитии, создавая незабываемые и спокойные впечатления.",
+    "features": [
+      {
+        "title": "Роскошный кемпинг",
+        "desc": "Кемперы наслаждаются природой с предоставленными палатками, мангалами, костром, туалетными удобствами и вкусной едой."
+      },
+      {
+        "title": "Природный опыт",
+        "desc": "Пляжный кемпинг погружает в захватывающие природные приключения."
+      },
+      {
+        "title": "Приключенческое путешествие",
+        "desc": "Исследуйте лодочное сафари по реке Маду, полное волнений и открытий."
+      }
+    ]
+  }
+}

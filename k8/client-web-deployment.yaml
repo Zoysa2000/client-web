@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-web-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: client-web
+  template:
+    metadata:
+      labels:
+        app: client-web
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
+      containers:
+        - name: client-web
+          image: thilina123/client-web:662a6e8
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

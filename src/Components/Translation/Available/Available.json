@@ -1,0 +1,36 @@
+{
+  "en": {
+    "heading": "Get your story ready for campfire storytime.",
+    "features": [
+      {
+        "title": "Convenient Place",
+        "desc": "Discover a camper's haven serene, well-equipped, and perfectly located. Our convenient camping spot offers the ideal blend of nature's charm and modern amenities for an unforgettable outdoor retreat."
+      },
+      {
+        "title": "Professional Team Expert",
+        "desc": "Count on our professional camping team—passionate experts dedicated to enhancing your outdoor experience. From gear advice to survival skills, we're your trusted companions in nature's playground."
+      },
+      {
+        "title": "24/7 Premium Support",
+        "desc": "Experience seamless assistance with our 24/7 Premium Support. Our dedicated team ensures swift resolution and personalized service, providing peace of mind around the clock."
+      }
+    ]
+  },
+  "ru": {
+    "heading": "Приготовьте свою историю для вечернего костра.",
+    "features": [
+      {
+        "title": "Удобное место",
+        "desc": "Откройте для себя рай для кемперов спокойный, хорошо оборудованный и идеально расположенный. Наше удобное место для кемпинга предлагает идеальное сочетание природного очарования и современных удобств для незабываемого отдыха на природе."
+      },
+      {
+        "title": "Профессиональная команда экспертов",
+        "desc": "Положитесь на нашу профессиональную команду кемпинга  увлеченные эксперты, стремящиеся улучшить ваш отдых на природе. От советов по снаряжению до навыков выживания  мы ваши надежные спутники в природной среде."
+      },
+      {
+        "title": "Круглосуточная премиальная поддержка",
+        "desc": "Ощутите беспроблемную помощь с нашей круглосуточной премиальной поддержкой. Наша преданная команда обеспечивает быстрое решение проблем и персонализированное обслуживание, обеспечивая спокойствие в любое время суток."
+      }
+    ]
+  }
+}

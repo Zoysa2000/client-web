@@ -1,0 +1,24 @@
+{
+  "en": {
+    "namePlaceholder": "Name",
+    "datePlaceholder": "Select Date",
+    "personPlaceholder": "No of Persons",
+    "phonePlaceholder": "Contact Number",
+    "campingOption": "Oruwella Beach camping",
+    "bookingButton": "Booking",
+    "bookingSuccess": "Booking successful! We will contact you within 24 hours.",
+    "bookingError": "Booking failed. Please fill all required fields.",
+    "captchaError": "Please verify CAPTCHA"
+  },
+  "ru": {
+    "namePlaceholder": "Имя",
+    "datePlaceholder": "Выберите дату",
+    "personPlaceholder": "Количество человек",
+    "phonePlaceholder": "Контактный номер",
+    "campingOption": "Кемпинг на пляже Орувелла",
+    "bookingButton": "Бронирование",
+    "bookingSuccess": "Бронирование успешно! Мы свяжемся с вами в течение 24 часов.",
+    "bookingError": "Не удалось забронировать. Пожалуйста, заполните все обязательные поля.",
+    "captchaError": "Пожалуйста, подтвердите CAPTCHA"
+  }
+}
